@@ -1,0 +1,60 @@
+body {
+  align-items: center;
+  background-color: rgb(29, 11, 11);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  color: #eee;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#salary {
+  background-color: #303245;
+  border-radius: 6px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  height: 15%;
+
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#form {
+  background-color: #1e203d;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 300px;
+  padding: 20px;
+  width: 320px;
+  font-family: Helvetica, Sans-Serif;
+  text-align: center;
+}
+
+#submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+}
+
+#submit:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#output {
+  color: white;
+}
