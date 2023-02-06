@@ -1,17 +1,24 @@
 const input = document.getElementById("salary");
 const output = document.getElementById("output");
 
+let percentage = 10;
+
+document
+  .getElementById("percentages")
+  .querySelectorAll("input")
+  .forEach((input) => {
+    input.addEventListener("click", (e) => {
+      if (!e.target) return;
+
+      percentage = e.target.value;
+    });
+  });
+
 function calculate() {
   var salaryResult = Math.round(document.getElementById("salary").value);
+  if (!percentage) output.innerText = "Error";
 
-  if (document.getElementById("a").checked) {
-    output.innerText =
-      "Your net salary is: $ " + Math.round((salaryResult / 100) * 10);
-  } else if (document.getElementById("b").checked) {
-    output.innerText =
-      "Your net salary is: $ " + Math.round((salaryResult / 100) * 35);
-  } else if (document.getElementById("c").checked) {
-    output.innerText =
-      "Your net salary is: $ " + Math.round((salaryResult / 100) * 50);
-  }
+  output.innerText =
+    "Your net salary is: $ " +
+    Math.round(salaryResult - (salaryResult / 100) * percentage);
 }
