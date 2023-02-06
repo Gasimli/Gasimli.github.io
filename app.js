@@ -15,10 +15,10 @@ document
   });
 
 function calculate() {
-  var salaryResult = Math.round(document.getElementById("salary").value);
+  var salaryResult = document.getElementById("salary").value;
   if (!percentage) output.innerText = "Error";
 
   output.innerText =
     "Your net salary is: $ " +
-    Math.round(salaryResult - (salaryResult / 100) * percentage);
+    (salaryResult - (salaryResult / 100) * percentage);
 }
